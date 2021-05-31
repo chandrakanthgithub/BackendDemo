@@ -17,7 +17,7 @@ app.use(
 );
 app.options('*', cors());
 
-// SWAGGER
+// SWAGGER UI
 var subpath = express();
 app.use(
 	bodyParser.json({
@@ -67,7 +67,7 @@ app.use(function(req, res, next) {
 	res.locals.connection = mysql.createPool({
 		host: 'localhost',
 		user: 'root',
-		password: '<YOUR-PASSWORD>',
+		password: 'password',
 		database: 'crud',
 		timezone: 'UTC+0'
 	});
