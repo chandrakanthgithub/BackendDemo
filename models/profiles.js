@@ -1,4 +1,5 @@
 /* jshint indent: 2 */
+// hello
 
 module.exports = function(sequelize, DataTypes) {
 	var profiles = sequelize.define(
