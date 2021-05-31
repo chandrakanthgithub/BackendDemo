@@ -12,5 +12,5 @@ RUN npm install \
  && mv /app/node_modules /node_modules
  
 COPY . /app
-# dockerfile for nodejs
+# dockerfile for nodejs connection to sql
 #CMD ["nodemon", "server.js"]
