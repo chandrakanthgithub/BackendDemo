@@ -91,7 +91,7 @@ router.post('/', function(req, res, next) {
 router.put('/', function(req, res, next) {
 	let vm = req.body;
 
-	// CHECK IF USER EXISTS
+	// CHECK IF USER EXISTS or not
 	model.users
 		.findOne({
 			where: {
