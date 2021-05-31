@@ -4,11 +4,13 @@ networks:
     app-tier:
       driver: bridge
 services:
+
     mongo:
         image: mongo
         restart: always
         networks:
             - app-tier
+
     mysqldb:
         build:
             context: ./docs
@@ -21,6 +23,7 @@ services:
             - "3306:3306"
         networks:
             - app-tier
+
     nodeserver:
         depends_on:
             - mysqldb
@@ -36,6 +39,7 @@ services:
             - "3000:3000"
         networks:
             - app-tier
+
     nginx:
         image: nginx:latest
         container_name: nginx
